@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Text Editor</title>
+    <link rel="stylesheet" href="Text editor style.css" />
+  </head>
+  <body>
+    <h2>Online Text Editor</h2>
+    <div class="toolbar">
+      <button onclick="format('bold')"><b>B</b></button>
+      <button onclick="format('underline')"><u>U</u></button>
+      <button onclick="format('italic')"><i>I</i></button>
+
+      <input
+        type="color"
+        onchange="changeColor(this.value)"
+        title="Font Color"
+      />
+      <button onclick="format('justifyLeft')">
+        <img src="images/left align.png" alt="Left" />
+      </button>
+      <button onclick="format('justifyCenter')">
+        <img src="images/align-center.png" alt="center" />
+      </button>
+      <button onclick="format('justifyRight')">
+        <img src="images/align-right.png" alt="Right" />
+      </button>
+      <button onclick="format('justifyFull')">
+        <img src="images/justify.png" alt="justify" />
+      </button>
+      <button onclick="undo()">
+        <img src="images/undo.png" alt="Undo" />
+      </button>
+      <button onclick="redo()">
+        <img src="images/redo.png" alt="Redo" />
+      </button>
+    </div>
+    <div id="editor" contenteditable="true">Type your text here...</div>
+    <script src="Text editor script.js"></script>
+  </body>
+</html>
